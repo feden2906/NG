@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {UsersService} from "../servises/users.service";
-import {IUser} from "../models/IUser";
+import {Component} from '@angular/core';
+import {UsersService} from "../../servises";
+import {IUser} from "../../models";
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent {
 
   users: IUser[];
 
@@ -16,10 +16,6 @@ export class UsersComponent implements OnInit {
       this.users = value;
       console.log(this.users)
     })
-
-  }
-
-  ngOnInit(): void {
   }
 
 }
